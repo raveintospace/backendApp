@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		341DBDEF298EADBF00BCDBD4 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341DBDEE298EADBF00BCDBD4 /* UICustomButton.swift */; };
 		344E45C1298E70DB00482A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E45C0298E70DB00482A7A /* AppDelegate.swift */; };
 		344E45C3298E70DB00482A7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E45C2298E70DB00482A7A /* SceneDelegate.swift */; };
 		344E45C5298E70DB00482A7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344E45C4298E70DB00482A7A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		341DBDEE298EADBF00BCDBD4 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		344E45BD298E70DB00482A7A /* backendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = backendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		344E45C0298E70DB00482A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		344E45C2298E70DB00482A7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				344E45C0298E70DB00482A7A /* AppDelegate.swift */,
 				344E45C2298E70DB00482A7A /* SceneDelegate.swift */,
 				344E45C4298E70DB00482A7A /* ViewController.swift */,
+				341DBDEE298EADBF00BCDBD4 /* UICustomButton.swift */,
 				344E45C6298E70DB00482A7A /* Main.storyboard */,
 				344E45C9298E70DD00482A7A /* Assets.xcassets */,
 				344E45CB298E70DD00482A7A /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				341DBDEF298EADBF00BCDBD4 /* UICustomButton.swift in Sources */,
 				344E45C5298E70DB00482A7A /* ViewController.swift in Sources */,
 				344E45C1298E70DB00482A7A /* AppDelegate.swift in Sources */,
 				344E45C3298E70DB00482A7A /* SceneDelegate.swift in Sources */,

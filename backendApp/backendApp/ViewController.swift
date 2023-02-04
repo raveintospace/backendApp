@@ -21,9 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func setupView() {
-        loginButton.layer.cornerRadius = 21
-        loginButton.layer.masksToBounds = true
-        loginButton.backgroundColor = UIColor.orange
     }
     
     // MARK: - Button actions

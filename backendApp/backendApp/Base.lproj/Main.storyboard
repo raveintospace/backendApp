@@ -49,7 +49,7 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="HLt-5J-cgH"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-CG-WzQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-CG-WzQ" customClass="UICustomButton" customModule="backendApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="108" width="374" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="20" y="827" width="374" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2l-tX-Ira">
-                                        <rect key="frame" x="63" y="-7.5" width="248" height="50"/>
+                                        <rect key="frame" x="8" y="-8" width="358" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="GYg-A0-ONt"/>
                                         </constraints>
@@ -81,7 +81,7 @@
                                 <constraints>
                                     <constraint firstItem="Q2l-tX-Ira" firstAttribute="centerY" secondItem="MqA-Zh-l3g" secondAttribute="centerY" id="ENZ-w6-ZDN"/>
                                     <constraint firstItem="Q2l-tX-Ira" firstAttribute="centerX" secondItem="MqA-Zh-l3g" secondAttribute="centerX" id="h9r-2o-FgW"/>
-                                    <constraint firstItem="Q2l-tX-Ira" firstAttribute="leading" secondItem="MqA-Zh-l3g" secondAttribute="leading" constant="63" id="ozi-Vw-HWN"/>
+                                    <constraint firstItem="Q2l-tX-Ira" firstAttribute="leading" secondItem="MqA-Zh-l3g" secondAttribute="leading" constant="8" id="ozi-Vw-HWN"/>
                                 </constraints>
                             </view>
                         </subviews>

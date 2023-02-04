@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-ds-1IW">
-                                <rect key="frame" x="20" y="94" width="374" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzN-ds-1IW">
+                                <rect key="frame" x="20" y="88" width="374" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mentoría VIP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9C-Xr-RFd">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -30,42 +30,83 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2l-tX-Ira">
-                                <rect key="frame" x="83" y="827" width="249" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="¿Has olvidado tu contraseña?"/>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-uM-WBZ">
-                                <rect key="frame" x="170" y="152" width="75" height="142.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-uM-WBZ">
+                                <rect key="frame" x="20" y="146" width="374" height="142.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOv-S0-J6n">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOv-S0-J6n">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="4VH-vc-uRh"/>
+                                        </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wv-LM-U69">
-                                        <rect key="frame" x="0.0" y="54" width="75" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wv-LM-U69">
+                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="HLt-5J-cgH"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-CG-WzQ">
-                                        <rect key="frame" x="0.0" y="108" width="75" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="108" width="374" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <connections>
+                                            <action selector="loginButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEd-Sm-xsZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="M6R-CG-WzQ" firstAttribute="width" secondItem="7wv-LM-U69" secondAttribute="width" id="wCB-rk-c1R"/>
+                                </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqA-Zh-l3g">
+                                <rect key="frame" x="20" y="827" width="374" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2l-tX-Ira">
+                                        <rect key="frame" x="63" y="-7.5" width="248" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GYg-A0-ONt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="¿Has olvidado tu contraseña?"/>
+                                        <connections>
+                                            <action selector="forgottenPasswordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bij-bE-jz6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Q2l-tX-Ira" firstAttribute="centerY" secondItem="MqA-Zh-l3g" secondAttribute="centerY" id="ENZ-w6-ZDN"/>
+                                    <constraint firstItem="Q2l-tX-Ira" firstAttribute="centerX" secondItem="MqA-Zh-l3g" secondAttribute="centerX" id="h9r-2o-FgW"/>
+                                    <constraint firstItem="Q2l-tX-Ira" firstAttribute="leading" secondItem="MqA-Zh-l3g" secondAttribute="leading" constant="63" id="ozi-Vw-HWN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bzN-ds-1IW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eA2-Qj-tnP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bzN-ds-1IW" secondAttribute="trailing" constant="20" id="f9l-cJ-13Q"/>
-                            <constraint firstItem="bzN-ds-1IW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="jrW-MX-dtf"/>
-                            <constraint firstItem="bzN-ds-1IW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k1Y-Ay-3sS"/>
+                            <constraint firstItem="bzN-ds-1IW" firstAttribute="leading" secondItem="sXF-uM-WBZ" secondAttribute="leading" id="3e9-sn-tYi"/>
+                            <constraint firstItem="sXF-uM-WBZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="146" id="DeA-dT-xRZ"/>
+                            <constraint firstItem="MqA-Zh-l3g" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F3g-76-vIR"/>
+                            <constraint firstItem="bzN-ds-1IW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FjI-Y8-vgM"/>
+                            <constraint firstItem="sXF-uM-WBZ" firstAttribute="top" secondItem="bzN-ds-1IW" secondAttribute="bottom" constant="28" id="InY-kH-pvB"/>
+                            <constraint firstItem="MqA-Zh-l3g" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="827" id="KGO-wd-h7b"/>
+                            <constraint firstItem="sXF-uM-WBZ" firstAttribute="leading" secondItem="MqA-Zh-l3g" secondAttribute="leading" id="Qxt-Qa-iVa"/>
+                            <constraint firstItem="sXF-uM-WBZ" firstAttribute="trailing" secondItem="MqA-Zh-l3g" secondAttribute="trailing" id="YC5-dy-JMd"/>
+                            <constraint firstItem="bzN-ds-1IW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jp3-kD-Dqh"/>
+                            <constraint firstItem="bzN-ds-1IW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="kAf-8e-3eZ"/>
+                            <constraint firstItem="bzN-ds-1IW" firstAttribute="trailing" secondItem="sXF-uM-WBZ" secondAttribute="trailing" id="m72-4l-t3D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgottenPasswordButton" destination="Q2l-tX-Ira" id="UJD-Ck-xMT"/>
+                        <outlet property="loginButton" destination="M6R-CG-WzQ" id="Cf2-KP-Prx"/>
+                        <outlet property="passwordTextField" destination="7wv-LM-U69" id="p83-7m-0Ry"/>
+                        <outlet property="userTextField" destination="eOv-S0-J6n" id="gjJ-QV-bTi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

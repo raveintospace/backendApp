@@ -1,19 +1,37 @@
 //
 //  ViewController.swift
 //  backendApp
-//
+//  https://youtu.be/UY2xq9L9YJA
 //  Created by Uri on 4/2/23.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet private weak var userTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgottenPasswordButton: UIButton!
+    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupView()
     }
-
-
+    
+    fileprivate func setupView() {
+        loginButton.layer.cornerRadius = 21
+        loginButton.layer.masksToBounds = true
+        loginButton.backgroundColor = UIColor.orange
+    }
+    
+    // MARK: - Button actions
+    
+    @IBAction private func loginButtonAction(_ sender: Any) {
+    }
+    
+    @IBAction private func forgottenPasswordButtonAction(_ sender: Any) {
+    }
 }
 

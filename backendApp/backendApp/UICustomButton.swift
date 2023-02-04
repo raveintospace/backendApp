@@ -14,6 +14,6 @@ class UICustomButton: UIButton {
         layer.cornerRadius = 12
         layer.masksToBounds = true
         backgroundColor = .orange
-        setTitleColor(.white, for: .normal)
+        tintColor = .white
     }
 }

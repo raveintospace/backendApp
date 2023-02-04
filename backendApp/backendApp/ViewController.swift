@@ -14,6 +14,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var forgottenPasswordButton: UIButton!
     
+    // instance of our connection manager
+    private let connectionManager = ConnectionManager()
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Button actions
     
     @IBAction private func loginButtonAction(_ sender: Any) {
+        connectionManager.callLoginWith(user: "", password: "")
     }
     
     @IBAction private func forgottenPasswordButtonAction(_ sender: Any) {
